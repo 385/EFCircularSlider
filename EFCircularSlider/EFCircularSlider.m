@@ -565,4 +565,18 @@ static const CGFloat kFitFrameRadius = -1.0;
     return CGPointMake(self.centerPoint.x + offset.x, self.centerPoint.y + offset.y);
 }
 
+//set CurrentValue in Your Code to see how it works
+-(void)setCurrentValue:(float)currentValue{
+    
+    _currentValue = currentValue;
+    
+    if(_currentValue > 0){
+        
+        angle = 360 - floor((360/(_maximumValue - _minimumValue)) * _currentValue);
+    }else{
+        angle = 0;
+    }
+    
+    [self setNeedsDisplay];
+}
 @end
