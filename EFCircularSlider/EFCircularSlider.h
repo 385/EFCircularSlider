@@ -33,6 +33,10 @@ typedef enum : NSUInteger {
  */
 -(id)initWithRadius:(CGFloat)radius;
 
+/**
+set the CurrentValue in Your Code without touch of user
+-(void)setCurrentValue:(float)currentValue;
+*/
 
 #pragma mark - Values
 /**
